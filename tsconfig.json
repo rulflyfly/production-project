@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      //highlights code with no type
+      "noImplicitAny": true,
+      "module": "ESNext",
+      //the version of js to compile to for most browser support
+      "target": "es5",
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      //allows to use simple imports and exports instead of common js 
+      "esModuleInterop": true,
+      //allows for default import from libraries that don't summort it 
+      "allowSyntheticDefaultImports": true,
+    },
+    "ts-node": {
+      "compilerOptions": {
+        "module": "CommonJS"
+      }
+    }
+  }
