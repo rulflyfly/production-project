@@ -10,6 +10,9 @@
       "allowJs": true,
       "moduleResolution": "node",
       "baseUrl": ".",
+      "paths": {
+        "*": ["./src/*"]
+      },
       //allows to use simple imports and exports instead of common js 
       "esModuleInterop": true,
       //allows for default import from libraries that don't summort it 
