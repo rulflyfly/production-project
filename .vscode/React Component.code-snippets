@@ -1,0 +1,24 @@
+{
+	"React Component with classNames": {
+		"prefix": "rfc",
+		"body": [
+		  "import { classNames } from 'shared/lib/classNames';",
+		  "import classes from './${TM_FILENAME_BASE}.module.scss';",
+		  "",
+		  "interface ${TM_FILENAME_BASE}Props {",
+		  "    className?: string",
+		  "}",
+		  "",
+		  "const ${TM_FILENAME_BASE} = (props: ${TM_FILENAME_BASE}Props) => {",
+		  "  return (",
+		  "    <div className={classNames(classes.${TM_FILENAME_BASE})}>",
+		  "        ",
+		  "    </div>",
+		  "  )",
+		  "}",
+		  "",
+		  "export default ${TM_FILENAME_BASE}"
+		],
+		"description": "React component with classNames and SCSS module"
+	  }
+}
