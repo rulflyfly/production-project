@@ -4,7 +4,6 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
-import { useTranslation } from 'react-i18next';
 import { AppRouter } from './providers/router';
 
 function App() {
