@@ -2,6 +2,7 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        jest: true,
     },
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -42,6 +43,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'max-len': ['warning', { ignoreComments: true }],
 
     },
     settings: {
