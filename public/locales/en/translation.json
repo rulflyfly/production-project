@@ -3,5 +3,7 @@
     "Toggle": "Toggle",
     "Main": "Main",
     "About": "About",
-    "Page not found": "Page not found"
+    "Page not found": "Page not found",
+    "Page error message": "Something went wrong",
+    "Refresh page": "Refresh page"
 }
