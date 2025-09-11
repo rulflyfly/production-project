@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
@@ -21,13 +21,14 @@ const Sidebar = ({ className }: SidebarProps) => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(
                 classes.sidebar,
                 { [classes.collapsed]: collapsed },
                 [className],
             )}
         >
-            <Button onClick={onToggle}>{t('Toggle')}</Button>
+            <Button data-testid="sidebar-toggle" onClick={onToggle}>{t('Toggle')}</Button>
             <div className={classes.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={classes.lang} />

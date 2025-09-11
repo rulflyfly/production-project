@@ -45,7 +45,7 @@ module.exports = {
         '@typescript-eslint/ban-ts-comment': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': 'off',
-        'max-len': ['error', { ignoreComments: true }],
+        'max-len': ['error', { ignoreComments: true, code: 100 }],
 
     },
     settings: {
