@@ -20,11 +20,12 @@
     },
     "ts-node": {
       "compilerOptions": {
-        "module": "CommonJS"
+        "module": "CommonJS",
       }
     },
     "include": [
       "src",
       "./config/jest/setupTests.ts"
-    ]
+    ],
+    "exclude": ["node_modules"]
   }
