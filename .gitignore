@@ -13,3 +13,5 @@ yarn-error.log*
 .vscode/*       # VS Code
 !.vscode/settings.json
 !.vscode/extensions.json
+
+/storybook-static
