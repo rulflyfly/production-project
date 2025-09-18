@@ -30,7 +30,6 @@ const Modal = (props: ModalProps) => {
     const mods: Record<string, boolean> = {
         [classes.opened]: isOpen,
         [classes.isClosing]: isClosing,
-        [classes[theme]]: true,
     };
 
     const closeHandler = useCallback(() => {
@@ -65,7 +64,7 @@ const Modal = (props: ModalProps) => {
 
     return (
         <Portal>
-            <div className={classNames(classes.modal, mods, [className])}>
+            <div className={classNames(classes.modal, mods, [className, theme, 'app_modal'])}>
                 <div className={classes.overlay} onClick={closeHandler}>
                     <div className={classes.content} onClick={onContentClick}>
                         {children}
