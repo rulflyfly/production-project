@@ -8,5 +8,8 @@
     "Page error message": "Произошла непредвиденная ошибка",
     "Refresh page": "Обновить страницу",
     "throw error": "сделать ошибку",
-    "Login": "Войти"
+    "Login": "Войти",
+    "increment": "Увеличить",
+    "decrement": "Уменьшить"
+
 }

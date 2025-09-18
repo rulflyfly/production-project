@@ -8,5 +8,7 @@
     "Page error message": "Something went wrong",
     "Refresh page": "Refresh page",
     "throw error": "throw error",
-    "Login": "Log in"
+    "Login": "Log in",
+    "increment": "Increment",
+    "decrement": "Decrement"
 }

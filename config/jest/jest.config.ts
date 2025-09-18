@@ -47,6 +47,10 @@ export default {
         'node_modules/(?!(i18next|react-i18next)/)',
     ],
 
+    globals: {
+        __IS_DEV__: true,
+    },
+
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
