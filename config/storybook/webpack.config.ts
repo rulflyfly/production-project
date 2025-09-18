@@ -21,8 +21,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
     }
 
     config.resolve.modules = [
-        ...(config.resolve.modules || []),
         paths.src,
+        ...(config.resolve.modules || []),
     ];
 
     config.resolve.extensions = [
