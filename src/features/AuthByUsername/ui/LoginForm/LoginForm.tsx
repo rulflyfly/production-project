@@ -42,7 +42,7 @@ const LoginForm = memo((props: LoginFormProps) => {
             <Text title={t('Login form')} />
             {error && (
                 <Text
-                    text={error}
+                    text={t('You entered wrong username or password')}
                     theme={TextTheme.ERROR}
                 />
             )}
