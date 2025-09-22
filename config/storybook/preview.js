@@ -5,8 +5,8 @@ import { ThemeDecorator }
 import { Theme } from '../../src/app/providers/ThemeProvider/index.tsx';
 import { RouterDecorator }
     from '../../src/shared/config/storybook/RouterDecorator/RouterDecorator.tsx';
-import { ReduxDecorator }
-    from '../../src/shared/config/storybook/ReduxDecorator/ReduxDecorator.tsx';
+import { TranslationDecorator }
+    from '../../src/shared/config/storybook/TranslationDecorator/TranslationDecorator.tsx';
 
 export const parameters = {
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -21,4 +21,4 @@ export const parameters = {
 addDecorator(StyleDecorator);
 addDecorator(ThemeDecorator(Theme.LIGHT));
 addDecorator(RouterDecorator);
-addDecorator(ReduxDecorator);
+addDecorator(TranslationDecorator);
