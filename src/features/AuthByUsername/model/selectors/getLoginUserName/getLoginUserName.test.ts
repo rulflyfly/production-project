@@ -13,6 +13,6 @@ describe('getLoginUserName.test', () => {
     });
     test('should work with empty state', () => {
         const state: DeepPartial<StateSchema> = {};
-        expect(getLoginUserName(state as StateSchema)).toEqual(undefined);
+        expect(getLoginUserName(state as StateSchema)).toEqual('');
     });
 });
