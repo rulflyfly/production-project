@@ -1,13 +1,15 @@
-import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
+import { configureStore, getDefaultMiddleware, ReducersMapObject } from '@reduxjs/toolkit';
 import { counterReducer } from 'entities/Counter';
 import { userReducer } from 'entities/User';
-import { useDispatch } from 'react-redux';
+import { $api } from 'shared/api/api';
+import { NavigateOptions, To } from 'react-router-dom';
 import { StateSchema } from './StateSchema';
 import { createReducerManager } from './reducerManager';
 
 export function createReduxStore(
     initialState?: StateSchema,
     asyncReducers?: ReducersMapObject<StateSchema>,
+    navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
     const rootReducers: ReducersMapObject<StateSchema> = {
         ...asyncReducers,
@@ -22,6 +24,15 @@ export function createReduxStore(
         reducer: reducerManager.reduce,
         devTools: __IS_DEV__,
         preloadedState: initialState,
+        // @ts-ignore
+        middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+            thunk: {
+                extraArgument: {
+                    api: $api,
+                    navigate,
+                },
+            },
+        }),
     });
 
     // @ts-ignore
