@@ -55,6 +55,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'no-param-reassign': 'off',
         'react/prop-types': 'off',
+        'no-undef': 'off',
 
     },
     settings: {

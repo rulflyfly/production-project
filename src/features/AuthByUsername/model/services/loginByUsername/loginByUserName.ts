@@ -9,7 +9,8 @@ interface LoginByUsernameProps {
 }
 
 export const loginByUserName = createAsyncThunk<User, LoginByUsernameProps,
-    ThunkConfig<string>>(
+    ThunkConfig<string>
+    >(
         'login/loginByUserName',
         async (authData, thunkApi) => {
             const { extra, dispatch, rejectWithValue } = thunkApi;
@@ -21,7 +22,9 @@ export const loginByUserName = createAsyncThunk<User, LoginByUsernameProps,
                 }
                 localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
                 dispatch(userActions.setAuthData(response.data));
-                extra.navigate('/about');
+                if (extra.navigate) {
+                    extra.navigate('/about');
+                }
                 return response.data;
             } catch {
                 return rejectWithValue('You entered wrong username or password');

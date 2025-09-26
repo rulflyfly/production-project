@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
@@ -30,7 +30,7 @@ const Modal = (props: ModalProps) => {
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
 
-    const mods: Record<string, boolean> = {
+    const mods: Mods = {
         [classes.opened]: isOpen,
         [classes.isClosing]: isClosing,
     };

@@ -13,7 +13,6 @@ export default {
     },
 } as ComponentMeta<typeof ProfilePage>;
 
-// @ts-ignore
 const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
 export const Light = Template.bind({});

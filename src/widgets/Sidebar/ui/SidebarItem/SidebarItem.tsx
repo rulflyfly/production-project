@@ -20,11 +20,11 @@ const SidebarItem = memo((props: SidebarItemProps) => {
     return (
         <AppLink
             theme={AppLinkTheme.SECONDARY}
-            to={item.path}
+            to={item?.path || '/'}
             className={classNames(classes.item, { [classes.collapsed]: collapsed }, [])}
         >
-            <item.Icon className={classes.icon} />
-            <span className={classes.link}>{t(`${item.text}`)}</span>
+            {item && <item.Icon className={classes.icon} />}
+            <span className={classes.link}>{t(`${item && item.text}`)}</span>
         </AppLink>
     );
 });
