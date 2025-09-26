@@ -14,10 +14,10 @@ export default {
 } as ComponentMeta<typeof ProfilePage>;
 
 const Template: ComponentStory<typeof ProfilePage> = (args) => {
-    const mockedDispatch = jest.fn();
+    // Just a dummy effect to simulate dispatch
     React.useEffect(() => {
-        mockedDispatch({ type: 'FETCH_PROFILE_MOCK' });
-    }, [mockedDispatch]);
+        console.log('FETCH_PROFILE_MOCK dispatched');
+    }, []);
 
     return <ProfilePage {...args} />;
 };
