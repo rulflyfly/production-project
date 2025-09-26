@@ -2,8 +2,8 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
+import ProfilePage from 'pages/ProfilePage/ui/ProfilePage';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ProfilePage from './ProfilePage';
 
 export default {
     title: 'pages/ProfilePage',
@@ -13,23 +13,12 @@ export default {
     },
 } as ComponentMeta<typeof ProfilePage>;
 
-const Template: ComponentStory<typeof ProfilePage> = (args) => {
-    // Just a dummy effect to simulate dispatch
-    React.useEffect(() => {
-        console.log('FETCH_PROFILE_MOCK dispatched');
-    }, []);
-
-    return <ProfilePage {...args} />;
-};
+const Template: ComponentStory<typeof ProfilePage> = (args) => <ProfilePage {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {};
-Light.decorators = [StoreDecorator({
-    profile: { data: { username: 'John', age: 25 }, isLoading: false, error: '' },
-})];
+Light.decorators = [StoreDecorator({})];
 
 export const Dark = Template.bind({});
 Dark.args = {};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-    profile: { data: { username: 'John', age: 25 }, isLoading: false, error: '' },
-})];
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];

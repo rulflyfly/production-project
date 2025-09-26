@@ -106,6 +106,7 @@
     "**/@babel/runtime": "7.5.0"
   },
   "loki": {
+    "fetchFailIgnore": "*",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
