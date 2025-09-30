@@ -1,15 +1,17 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from 'app/providers/StoreProvider';
 import { Profile } from 'entities/Profile/model/types/profile';
+import { getProfileForm } from '../../selectors/getProfileForm/getProfileForm';
 
-export const fetchProfileData = createAsyncThunk<Profile, void,
+export const updateProfileData = createAsyncThunk<Profile, void,
     ThunkConfig<string>
     >(
-        'profile/fetchProfileData',
+        'profile/updateProfileData',
         async (_, thunkApi) => {
-            const { extra, rejectWithValue } = thunkApi;
+            const { extra, rejectWithValue, getState } = thunkApi;
+            const formData = getProfileForm(getState());
             try {
-                const response = await extra.api.get<Profile>('/profile');
+                const response = await extra.api.put<Profile>('/profile', formData);
                 return response.data;
             } catch {
                 return rejectWithValue('You entered wrong username or password');

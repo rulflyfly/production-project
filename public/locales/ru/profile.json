@@ -2,5 +2,15 @@
     "Profile": "Профиль",
     "Edit": "Редактировать",
     "Your name": "Ваше имя",
-    "Your surname": "Ваша фамилия"
+    "Your surname": "Ваша фамилия",
+    "Error": "Ошибка",
+    "Refresh the page": "Обновите страницу",
+    "Cancel": "Отменить",
+    "Save": "Сохранить",
+    "Your age": "Ваш возраст",
+    "City": "Город",
+    "User name": "Имя пользователя",
+    "Avatar": "Фото",
+    "Choose currency": "Укажите валюту",
+    "Choose Country": "Укажите страну"
 }

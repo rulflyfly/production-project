@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { SidebarItemType } from 'widgets/Sidebar/model/items';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
+import { getUserAuthData } from 'entities/User';
+import { useSelector } from 'react-redux';
 import classes from './SidebarItem.module.scss';
 
 interface SidebarItemProps {
@@ -15,8 +17,14 @@ const SidebarItem = memo((props: SidebarItemProps) => {
         item,
         collapsed,
     } = props;
+    const isAuth = useSelector(getUserAuthData);
 
     const { t } = useTranslation();
+
+    if (item?.authOnly && !isAuth) {
+        return null;
+    }
+
     return (
         <AppLink
             theme={AppLinkTheme.SECONDARY}
