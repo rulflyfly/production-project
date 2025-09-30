@@ -12,5 +12,10 @@
     "User name": "Имя пользователя",
     "Avatar": "Фото",
     "Choose currency": "Укажите валюту",
-    "Choose Country": "Укажите страну"
+    "Choose Country": "Укажите страну",
+    "Server error": "Ошибка сервера",
+    "No data": "Данные отсутствуют",
+    "Incorrect age": "Неправильно указан возраст",
+    "Incorrect country": "Отсутствует страна",
+    "Enter your name": "Отсутствует имя"
 }

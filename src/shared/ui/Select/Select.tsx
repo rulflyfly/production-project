@@ -41,7 +41,7 @@ const Select = memo((props: SelectProps) => {
     )), [options]);
 
     const mods: Mods = {
-
+        [classes.readonly]: readonly,
     };
     return (
         <div className={classNames(classes.selectWrapper, mods, [className])}>

@@ -9,17 +9,17 @@ export class TestAsyncThunk<Return, Arg, RegectValue> {
 
     getState: () => StateSchema;
 
-    api: { post: jest.Mock };
+    api: { post: jest.Mock, get: jest.Mock, put: jest.Mock};
 
     navigate: jest.Mock;
 
     actionCreator: ActionCreatorType<Return, Arg, RegectValue>;
 
-    constructor(actionCreator: ActionCreatorType<Return, Arg, RegectValue>) {
+    constructor(actionCreator: ActionCreatorType<Return, Arg, RegectValue>, state?: DeepPartial<StateSchema>) {
         this.actionCreator = actionCreator;
         this.dispatch = jest.fn();
-        this.getState = jest.fn();
-        this.api = { post: jest.fn() };
+        this.getState = jest.fn(() => state as StateSchema);
+        this.api = { post: jest.fn(), get: jest.fn(), put: jest.fn() };
         this.navigate = jest.fn();
     }
 

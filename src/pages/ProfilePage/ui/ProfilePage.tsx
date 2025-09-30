@@ -9,13 +9,16 @@ import {
     getProfileForm,
     getProfileIsLoading,
     getProfileReadonly,
+    getValidateErrors,
     profileActions,
     ProfileCard,
     profileReducer,
+    ValidateProfileError,
 } from 'entities/Profile';
 import { useSelector } from 'react-redux';
 import { Currency } from 'entities/Currency';
 import { Country } from 'entities/Country';
+import Text, { TextTheme } from 'shared/ui/Text/Text';
 import ProfilePageHeader from './ProfilePageHeader/ProfilePageHeader';
 
 interface ProfilePageProps {
@@ -36,11 +39,23 @@ const ProfilePage = (props: ProfilePageProps) => {
     const error = useSelector(getProfileError);
     const readonly = useSelector(getProfileReadonly);
 
+    const validateErrors = useSelector(getValidateErrors);
+
     const { t } = useTranslation('profile');
     const dispatch = useAppDispatch();
 
+    const validateErrorTranslates = {
+        [ValidateProfileError.SERVER_ERROR]: t('Server error'),
+        [ValidateProfileError.NO_DATA]: t('No data'),
+        [ValidateProfileError.INCORRECT_AGE]: t('Incorrect age'),
+        [ValidateProfileError.INCORRECT_COUNTRY]: t('Incorrect country'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t('Enter your name'),
+    };
+
     useEffect(() => {
-        dispatch(fetchProfileData());
+        if (__PROJECT__ !== 'storybook') {
+            dispatch(fetchProfileData());
+        }
     }, [dispatch]);
 
     const onChangeFirstName = useCallback((value?: string) => {
@@ -79,6 +94,9 @@ const ProfilePage = (props: ProfilePageProps) => {
         <DynamicModuleLoader reducers={reducers}>
             <div className={classNames('', {}, [className])}>
                 <ProfilePageHeader />
+                {validateErrors?.length && validateErrors.map((err) => (
+                    <Text key={err} theme={TextTheme.ERROR} text={validateErrorTranslates[err]} />
+                ))}
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}

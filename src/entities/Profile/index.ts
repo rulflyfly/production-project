@@ -3,9 +3,10 @@ import { getProfileError } from './model/selectors/getProfileError/getProfileErr
 import { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
 import { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading';
 import { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly';
+import { getValidateErrors } from './model/selectors/getValidateErrors/getValidateErrors';
 import { updateProfileData } from './model/services/updateProfileData/updateProfileData';
 import { profileActions, profileReducer } from './model/slice/profileSlice';
-import { ProfileSchema } from './model/types/profile';
+import { ProfileSchema, ValidateProfileError } from './model/types/profile';
 import ProfileCard from './ui/ProfileCard/ProfileCard';
 
 export {
@@ -18,5 +19,7 @@ export {
     getProfileError,
     getProfileReadonly,
     getProfileForm,
+    getValidateErrors,
     updateProfileData,
+    ValidateProfileError,
 };
