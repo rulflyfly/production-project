@@ -86,22 +86,82 @@
   ],
   "comments": [
     {
-      "id": "1",
+      "id": "qqqqqq",
       "text": "some comment",
       "articleId": "1",
       "userId": "1"
     },
     {
-      "id": "2",
+      "id": "11lflflf",
       "text": "some comment 2",
       "articleId": "1",
       "userId": "1"
     },
     {
-      "id": "3",
+      "id": "wekfpw",
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "hello!!!",
+      "id": "OsbkQGy"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "paka!!!!",
+      "id": "NhN22Q2"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "toerfoeroifjeorijfoeijrf",
+      "id": "e1cZeo1"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "today I did it",
+      "id": "s1n2z-l"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "I did it again",
+      "id": "LeIHRE8"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "jjjojnoooi",
+      "id": "-CMHwXH"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "kjnkjnkjnknj",
+      "id": "sKXN1Fb"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "joijoijoij",
+      "id": "yIB_QmS"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "I will do it again",
+      "id": "cOk-vOu"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "I'm doing it",
+      "id": "SeChrpO"
     }
   ],
   "users": [
@@ -120,14 +180,28 @@
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+    },
+    {
+      "id": "2",
+      "first": "nastya",
+      "lastname": "suhasya",
+      "age": 12,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "user123",
+      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+    }
+  ]
 }
