@@ -5,7 +5,7 @@ import {
 } from 'entities/Article/model/types/article';
 import Text, { TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import Icon from 'shared/ui/Icon/Icon';
-import EyeIcon from 'shared/assets/icons/profile.svg';
+import EyeIcon from 'shared/assets/icons/eye.svg';
 import { Card } from 'shared/ui/Card/Card';
 import { useHover } from 'shared/lib/hooks/useHover/useHover';
 import Avatar from 'shared/ui/Avatar/Avatar';
@@ -73,7 +73,7 @@ const ArticleListItem = (props: ArticleListItemProps) => {
         <div {...bindHover} onClick={onOpenArticle} className={classNames(classes.articleListItem, {}, [className, classes[view]])}>
             <Card className={classes.card}>
                 <div className={classes.imageWrapper}>
-                    <img src={article.img} className={classes.img} alt={article.img} />
+                    <img src={article.img} className={classes.img} alt={article.title} />
                     <Text text={article.createdAt} className={classes.date} />
                 </div>
                 <div className={classes.infoWrapper}>

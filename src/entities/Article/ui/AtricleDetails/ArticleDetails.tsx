@@ -13,8 +13,8 @@ import {
 import Text, { TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text';
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import Avatar from 'shared/ui/Avatar/Avatar';
-import EyeIcon from 'shared/assets/icons/profile.svg';
-import CalendarIcon from 'shared/assets/icons/article.svg';
+import EyeIcon from 'shared/assets/icons/eye.svg';
+import CalendarIcon from 'shared/assets/icons/calendar.svg';
 import Icon from 'shared/ui/Icon/Icon';
 import { ArticleBlock, ArticleBlockType } from 'entities/Article/model/types/article';
 import classes from './ArticleDetails.module.scss';
