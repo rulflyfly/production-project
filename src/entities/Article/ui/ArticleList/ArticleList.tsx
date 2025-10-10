@@ -27,14 +27,6 @@ const ArticleList = (props: ArticleListProps) => {
         view = ArticleView.SMALL,
     } = props;
 
-    if (isLoading) {
-        return (
-            <div className={classNames(classes.articleList, {}, [className, classes[view]])}>
-                {getSkeletons(view)}
-            </div>
-        );
-    }
-
     const renderArticle = (article: Article) => (
         <ArticleListItem article={article} view={view} className={classes.card} key={article.id} />
     );
@@ -44,6 +36,7 @@ const ArticleList = (props: ArticleListProps) => {
             {articles.length
                 ? articles.map(renderArticle)
                 : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 };
