@@ -22,9 +22,7 @@ export const loginByUserName = createAsyncThunk<User, LoginByUsernameProps,
                 }
                 localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
                 dispatch(userActions.setAuthData(response.data));
-                if (extra.navigate) {
-                    extra.navigate('/about');
-                }
+
                 return response.data;
             } catch {
                 return rejectWithValue('You entered wrong username or password');
