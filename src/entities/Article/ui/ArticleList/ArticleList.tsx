@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { Article, ArticleView } from 'entities/Article/model/types/article';
+import Text from 'shared/ui/Text/Text';
 import classes from './ArticleList.module.scss';
 import ArticleListItem from '../ArticleListItem/ArticleListItem';
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton';
@@ -30,6 +31,14 @@ const ArticleList = (props: ArticleListProps) => {
     const renderArticle = (article: Article) => (
         <ArticleListItem article={article} view={view} className={classes.card} key={article.id} />
     );
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div className={classNames(classes.articleList, {}, [className, classes[view]])}>
+                <Text title="No articles found" />
+            </div>
+        );
+    }
 
     return (
         <div className={classNames(classes.articleList, {}, [className, classes[view]])}>
